@@ -7,7 +7,7 @@ var ChatController = {
   // メッセージを送信
   send : function (message) {
     $.ajax({
-      url: './Server/Controller/ChatController.php',
+      url: './ChatController',
       type: "POST",
       dataType: "json",
       data: {message : message, action : 'send'},
@@ -26,7 +26,7 @@ var ChatController = {
   getMessage : function () {
     setInterval(function () {
       $.ajax({
-        url: './Server/Controller/ChatController.php',
+        url: './ChatController',
         type: "POST",
         dataType: "json",
         data: {action : 'get'},

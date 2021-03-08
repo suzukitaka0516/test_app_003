@@ -1,1 +1,54 @@
-h2 { text-align: center; }
+
+body{
+  color: #404040;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  letter-spacing: 0.8px;
+  line-height: 1.7;
+  background: #fff;
+  height: 100%;
+}
+.allwrap{
+  width: 96%;
+  font-size: 62.5%;
+  max-width: 800px;
+  min-height: calc(100vh - 187px);
+  margin: 0 auto;
+  padding-top: 64px;
+}
+.container{
+  padding: 40px 0;
+}
+#Notice{
+  max-width: 460px;
+  background-color: #ebe858;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.sabu{
+  margin-bottom: 60px !important;
+}
+#Notice p:first-child{
+  color: white;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: center;
+}
+#Notice dl{
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 20px 20px 5px;
+}
+.Notice-Text{
+  margin-bottom: 15px !important;
+}
+a{
+  color: #023894;
+  text-decoration: none;
+}
+#Notice .btn-Notice{
+  padding: 10px 0 5px;
+  border-top: solid 1px #B4B4B4;
+  text-align: right;
+}
