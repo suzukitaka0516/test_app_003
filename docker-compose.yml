@@ -11,21 +11,23 @@ services:
       - 10443:443
   mysql:
     image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
     volumes:
       - ./mysql:/var/lib/mysql
       - ./mysql_init:/docker-entrypoint-initdb.d
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=test
-      - MYSQL_USER=test
+      - MYSQL_ROOT_PASSWORD=pass 
+      - MYSQL_DATABASE=172.18.0.3
+      - MYSQL_USER=test_app_001
+      - MYSQL_PORT=3306
       - MYSQL_PASSWORD=test
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mysql
-      - PMA_USER=test
-      - PMA_PASSWORD=test
+      - PMA_USER=root
+      - PMA_PASSWORD=pass
     links:
       - mysql
     ports:
