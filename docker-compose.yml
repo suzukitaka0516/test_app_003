@@ -7,7 +7,7 @@ services:
       - ./php.ini:/usr/local/etc/php/php.ini
       - ./html:/var/www/html
     ports:
-      - 10080:80
+      - 6080:80
       - 10443:443
   mysql:
     image: mysql:latest
@@ -17,7 +17,7 @@ services:
       - ./mysql_init:/docker-entrypoint-initdb.d
     environment:
       - MYSQL_ROOT_PASSWORD=pass 
-      - MYSQL_DATABASE=172.18.0.3
+      - MYSQL_DATABASE=mysql
       - MYSQL_USER=test_app_001
       - MYSQL_PORT=3306
       - MYSQL_PASSWORD=test

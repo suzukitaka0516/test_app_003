@@ -6,7 +6,8 @@
 
   // SELECT文で選択したデータを表示させる為に追記
   $db = get_db_connect();
-  $bbs = get_comments($db＄,$id);
+  $bbs = get_comments($db);
+  
 
-  include_once dirname(__FILE__) . 'index.php';
+  include_once dirname(__FILE__) .'/index.php';
 ?>

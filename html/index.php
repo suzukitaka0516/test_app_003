@@ -5,10 +5,16 @@
     <title>ポートフォリオ　フォーム</title>
   </head>
   <body>
+    <?php foreach(get_errors() as $error){ ?>
+      <p><?php print $error; ?></p>
+    <?php } ?>
+    <?php foreach(get_messages() as $messages){ ?>
+      <p><?php print $messages; ?></p>
+    <?php } ?> 
     <h1>ポートフォリオ　フォーム</h1>
     <form method="post" action= "bbs_insert.php">
       <div>
-        <label>年月日</label>
+        <label>名前</label>
         <input type="text" name="name">
       </div>
       <div>
@@ -18,6 +24,7 @@
       <input type="submit" value="送信">
     </form>
     <!-- 表示 -->
+    
     <table>
       <thead>
         <tr>

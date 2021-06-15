@@ -20,4 +20,5 @@
     }
     
     redirect_to(BBS_URL);
+    
 ?>

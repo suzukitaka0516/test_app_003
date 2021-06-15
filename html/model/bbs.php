@@ -15,7 +15,7 @@ VALUES(?,?)
   return execute_query($db, $sql, array($name, $comment));
 }
 // Read
-function get_comments($db, $id){
+function get_comments($db){
   $sql = "
 SELECT
 id,
@@ -25,7 +25,8 @@ created
 FROM
 bbs
 ";
-  return fetch_all_query($db, $sql);
+  return fetch_all_query($db,$sql);
+
 }
 // Update
 function update_comment($db, $id, $comment){
